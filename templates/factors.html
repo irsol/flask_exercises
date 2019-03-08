@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        {% block head %}
+    <link rel="stylesheet" href="style.css" />
+    <title>{% block title %}{% endblock %} - Factors finder app</title>
+    {% endblock %}
+</head>
+<body>
+    <h1>The factors of {{ number }} are: </h1>
+    <ul>
+        {% for factor in find_factors %}
+            <li>{{ factor }}</li>
+        {% endfor %}
+
+    </ul>
+</body>
+</html>
